@@ -17,7 +17,11 @@ LICENSE=$(ls $REPO/list 2> /dev/null | $FUZZY --color=16 --preview="cat $REPO/li
 
 main() {
         if [[ ! -z $LICENSE ]]; then
-                command cp -v $REPO/list/$LICENSE ./LICENSE
+                printf 'Enter copyright year: '
+                read year
+                printf 'Enter name of copyright owner: '
+                read name
+                sed "s/\[year\]/$year/g;s/\[fullname\]/$name/g" $REPO/list/$LICENSE > ./LICENSE
         else
                 return 0
         fi
