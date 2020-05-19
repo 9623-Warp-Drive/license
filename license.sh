@@ -13,7 +13,7 @@ else
 fi
 
 REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)
-LICENSE=$(ls $REPO/list | $FUZZY --color=16)
+LICENSE=$(ls $REPO/list 2> /dev/null | $FUZZY --color=16 --preview="cat $REPO/list/{}" -q "$*")
 
 main() {
         if [[ ! -z $LICENSE ]]; then
