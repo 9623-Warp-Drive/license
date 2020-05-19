@@ -16,7 +16,11 @@ REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)
 LICENSE=$(ls $REPO/list | $FUZZY --color=16)
 
 main() {
-        command cp -v $REPO/list/$LICENSE ./LICENSE
+        if [[ ! -z $LICENSE ]]; then
+                command cp -v $REPO/list/$LICENSE ./LICENSE
+        else
+                return 0
+        fi
 }
 
 main '$@'
