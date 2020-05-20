@@ -5,18 +5,18 @@
 ---
 
 ## Table of Content
-- [Academic Free License 3.0 (AFL)](#academic-free-license-3.0)
-- [Apache License 2.0 (Apache-2.0)](#apache-license-2.0)
-- [Artistic License 2.0 (Artistic-2.0)](#artistic-license-2.0)
+- [Academic Free License 3.0 (AFL)](#academic-free-license-30)
+- [Apache License 2.0 (Apache-2.0)](#apache-license-20)
+- [Artistic License 2.0 (Artistic-2.0)](#artistic-license-20)
 - [BSD 3-Clause License (BSD-3-Clause)](#bsd-3-clause-license)
-- [Boost Software License 1.0 (BSL)](#boost-software-license-1.0)
-- [Creative Common Attribution 3.0 Unported License (CC-BY)](#creative-common-attribution-3.0-unported-license)
-- [Common Development and Distribution License 1.0 (CDDL-1.0)](#common-development-and-distribution-1.0)
-- [Eclipse Public License 1.0 (EPL-1.0)](#eclipse-public-license-1.0)
-- [GNU General Public License 3.0 (GPLv3)](#gnu-general-public-license-3.0)
-- [GNU Lesser General Pulic License 3.0 (LGPL-3.0)](#gnu-lesser-general-public-license-3.0)
+- [Boost Software License 1.0 (BSL)](#boost-software-licens-10)
+- [Creative Common Attribution 3.0 Unported License (CC-BY)](#creative-common-attribution-30-unported-license)
+- [Common Development and Distribution License 1.0 (CDDL-1.0)](#common-development-and-distribution-10)
+- [Eclipse Public License 1.0 (EPL-1.0)](#eclipse-public-license-10)
+- [GNU General Public License 3.0 (GPLv3)](#gnu-general-public-license-30)
+- [GNU Lesser General Pulic License 3.0 (LGPL-3.0)](#gnu-lesser-general-public-license-30)
 - [MIT License (MIT)](#mit-license)
-- [Mozilla Public License 2.0 (MPL-2.0)](#mozilla-public-license-2.0)
+- [Mozilla Public License 2.0 (MPL-2.0)](#mozilla-public-license-20)
 - [Microsoft Public License (MS-PL)](#microsoft-public-license)
 - [DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE (WTFPL)](#do-what-the-fuck-you-want-to-public-license)
 
