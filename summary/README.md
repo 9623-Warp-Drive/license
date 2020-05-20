@@ -15,6 +15,7 @@
 - [Eclipse Public License 1.0 (EPL-1.0)](#eclipse-public-license-10)
 - [GNU General Public License 3.0 (GPLv3)](#gnu-general-public-license-30)
 - [GNU Lesser General Pulic License 3.0 (LGPL-3.0)](#gnu-lesser-general-public-license-30)
+- [IPA Font License (IPA)](#ipa-font-license)
 - [MIT License (MIT)](#mit-license)
 - [Mozilla Public License 2.0 (MPL-2.0)](#mozilla-public-license-20)
 - [Microsoft Public License (MS-PL)](#microsoft-public-license)
@@ -50,6 +51,9 @@ You may copy, distribute and modify the software as long as you track changes/da
 
 ## GNU Lesser General Public License 3.0
 This license is mainly applied to libraries. You may copy, distribute and modify the software provided that modifications are described and licensed for free under LGPL. Derivatives works (including modifications or anything statically linked to the library) can only be redistributed under LGPL, but applications that use the library don't have to be.
+
+## IPA Font License
+The IPA license applies only to font programs and allows for a great deal of freedom in distributing them, both commercially and non-commercially. You cannot change the name of redistributed versions of the original software and must include a copy of the license, however.
 
 ## MIT License
 A short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.  There are many variations of this license in use.
