@@ -9,7 +9,8 @@ if command -v sk > /dev/null; then
 elif command -v fzf > /dev/null; then
         FUZZY=fzf
 else
-        echo 'missing: skim or fzf'
+        echo 'error: could not find either fzf or skim, is it installed?'
+        exit 1
 fi
 
 REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)
