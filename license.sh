@@ -24,7 +24,7 @@ main() {
                 read name
                 sed "s/\[year\]/$year/g;s/\[fullname\]/$name/g" $REPO/list/$LICENSE > ./LICENSE
         else
-                return 0
+                exit 1
         fi
 }
 
