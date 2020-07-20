@@ -13,7 +13,7 @@ else
 	exit 1
 fi
 
-REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)
+REPO=${BASH_SOURCE%/*}
 LICENSE=$(ls "$REPO/list" 2> /dev/null | $FUZZY --multi --color=16 --preview="cat $REPO/list/{}" -q "$*")
 LICENSE_ARRAY=($(echo "$LICENSE" | tr " " "\n"))
 
