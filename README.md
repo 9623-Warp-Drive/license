@@ -4,10 +4,10 @@
 2. Copy a license to `LICENSE`
 3. Create a commit and push to remote
 
+**NOTE:** Look in the [summary](https://github.com/9623-Warp-Drive/license/blob/master/summary) directory to see the TL;DR version for each license
+
 # Optional
 run `install.sh` to add a license to the current working directory
-
-**NOTE:** Look in the [summary](https://github.com/9623-Warp-Drive/license/blob/master/summary) directory to see the TL;DR version for each license
 
 # Todo
 - [x] Mutiple license selection capability
