@@ -14,29 +14,23 @@ else
 fi
 
 REPO=${BASH_SOURCE%/*}
-LICENSE=$(ls "$REPO/list" 2> /dev/null | $FUZZY --multi --color=16 --preview="cat $REPO/list/{}" -q "$*")
-LICENSE_ARRAY=($(echo "$LICENSE" | tr " " "\n"))
+mapfile -t LICENSE < <(find "$REPO/list" -type f 2> /dev/null | $FUZZY --multi --color=16 --preview="cat {}" -q "$*")
 
-main() {
-	if [[ -n "$LICENSE" ]]; then
-		printf 'Enter copyright year: '
-		read -r year
-		printf 'Enter name of copyright owner: '
-		read -r name
-
-		if [[ ${#LICENSE_ARRAY[@]} -eq 1 ]]; then
-			sed "s/\[year\]/$year/g;s/\[fullname\]/$name/g" "$REPO/list/$LICENSE" > ./LICENSE
-		elif [[ ${#LICENSE_ARRAY[@]} -gt 1 ]]; then
-			mkdir ./LICENSE
-			for license in "${LICENSE_ARRAY[@]}"; do
-				sed "s/\[year\]/$year/g;s/\[fullname\]/$name/g" "$REPO/list/$license" > ./LICENSE/"$license"
-			done
-		fi
-
-	else
-		echo 'error: no license is selected'
-		exit 1
-	fi
+[[ -n "$LICENSE" ]] || {
+	echo 'error: no license is selected'
+	exit 1
 }
 
-main
+printf 'Enter copyright year: ' && read -r year
+printf 'Enter name of copyright owner: ' && read -r name
+
+if [[ ${#LICENSE[@]} -eq 1 ]]; then
+	for license in "${LICENSE[@]}"; do
+		sed "s/\[year\]/$year/g;s/\[fullname\]/$name/g" "$license" > ./LICENSE
+	done
+elif [[ ${#LICENSE[@]} -gt 1 ]]; then
+	mkdir ./LICENSE || exit 1
+	for license in "${LICENSE[@]}"; do
+		sed "s/\[year\]/$year/g;s/\[fullname\]/$name/g" "$license" > "./LICENSE/$(basename -- "$license")"
+	done
+fi
