@@ -26,11 +26,17 @@ printf 'Enter name of copyright owner: ' && read -r name
 
 if [[ ${#LICENSE[@]} -eq 1 ]]; then
 	for license in "${LICENSE[@]}"; do
-		sed "s/\[year\]/$year/g;s/\[fullname\]/$name/g" "$license" > ./LICENSE
+		sed \
+			-e "s/\[year\]/$year/g" \
+			-e "s/\[fullname\]/$name/g" \
+			"$license" > ./LICENSE
 	done
 elif [[ ${#LICENSE[@]} -gt 1 ]]; then
 	mkdir ./LICENSE || exit 1
 	for license in "${LICENSE[@]}"; do
-		sed "s/\[year\]/$year/g;s/\[fullname\]/$name/g" "$license" > "./LICENSE/$(basename -- "$license")"
+		sed \
+			-e "s/\[year\]/$year/g" \
+			-e "s/\[fullname\]/$name/g" \
+			"$license" > "./LICENSE/$(basename -- "$license")"
 	done
 fi
